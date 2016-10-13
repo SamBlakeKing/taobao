@@ -25,7 +25,6 @@ xMat = np.column_stack((np.linspace(1,1,900),xMat))
 xMat = np.mat(xMat)
 yMat = np.mat(yMat)
 
-# use a sample for conflict
 # same things
 
 # 选取几个相关系数较高的特征点
