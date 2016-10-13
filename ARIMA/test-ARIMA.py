@@ -23,16 +23,16 @@ data2Diff = data2.diff()
 # ---------------------------------
 
 # ADF检验平稳性
-# t = sm.tsa.stattools.adfuller(temp)
-# output=pd.DataFrame(index=['Test Statistic Value', "p-value", "Lags Used", "Number of Observations Used","Critical Value(1%)","Critical Value(5%)","Critical Value(10%)"],columns=['value'])
-# output['value']['Test Statistic Value'] = t[0]
-# output['value']['p-value'] = t[1]
-# output['value']['Lags Used'] = t[2]
-# output['value']['Number of Observations Used'] = t[3]
-# output['value']['Critical Value(1%)'] = t[4]['1%']
-# output['value']['Critical Value(5%)'] = t[4]['5%']
-# output['value']['Critical Value(10%)'] = t[4]['10%']
-# print output
+t = sm.tsa.stattools.adfuller(temp)
+output=pd.DataFrame(index=['Test Statistic Value', "p-value", "Lags Used", "Number of Observations Used","Critical Value(1%)","Critical Value(5%)","Critical Value(10%)"],columns=['value'])
+output['value']['Test Statistic Value'] = t[0]
+output['value']['p-value'] = t[1]
+output['value']['Lags Used'] = t[2]
+output['value']['Number of Observations Used'] = t[3]
+output['value']['Critical Value(1%)'] = t[4]['1%']
+output['value']['Critical Value(5%)'] = t[4]['5%']
+output['value']['Critical Value(10%)'] = t[4]['10%']
+print output
 
 # ---------------------------------
 
@@ -46,8 +46,8 @@ data2Diff = data2.diff()
 # fig = sm.graphics.tsa.plot_pacf(temp,lags=length - 10,ax=ax2)
 # plt.show()
 
-acf_data = np.array(temp)
-print sm.tsa.arma_order_select_ic(acf_data,max_ar=10,max_ma=10,ic='aic')['aic_min_order']  # AIC
+# acf_data = np.array(temp)
+# print sm.tsa.arma_order_select_ic(acf_data,max_ar=10,max_ma=10,ic='aic')['aic_min_order']  # AIC
 
 # ---------------------------------
 
