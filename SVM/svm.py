@@ -25,6 +25,9 @@ xMat = np.column_stack((np.linspace(1,1,900),xMat))
 xMat = np.mat(xMat)
 yMat = np.mat(yMat)
 
+# use a sample for conflict
+# same things
+
 # 选取几个相关系数较高的特征点
 # listChioce = [i for i in range(19) if i not in [7, 8, 9, 10, 11, 17]]
 # xTestMat = xTestMat[:,tuple(listChioce)]
